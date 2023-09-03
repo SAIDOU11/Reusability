@@ -1,20 +1,13 @@
 import { useState } from 'react';
-import MenuButton from './MenuButton.jsx';
-import MenuDropdown from './MenuDropdown.jsx';
 
-const Menu = ({ buttonText = 'Menu', items }) => {
+const Menu = ({ children }) => {
   const [open, setOpen] = useState(true);
 
   const toggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
 
-  return (
-    <div className="menu">
-      <MenuButton buttonText={buttonText} onClick={toggle} />
-      {open && <MenuDropdown items={items} />}
-    </div>
-  );
+  return <div className="menu">{children}</div>;
 };
 
 export default Menu;
