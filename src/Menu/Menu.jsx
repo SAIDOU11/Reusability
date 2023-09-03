@@ -10,7 +10,7 @@ const Menu = ({ buttonText = 'Menu', items }) => {
   };
 
   return (
-    <div>
+    <div className="menu">
       <MenuButton buttonText={buttonText} onClick={toggle} />
       {open && <MenuDropdown items={items} />}
     </div>

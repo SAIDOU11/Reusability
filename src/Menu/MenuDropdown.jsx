@@ -1,4 +1,4 @@
-const MenuDropdoxn = ({ items }) => {
+const MenuDropdown = ({ items }) => {
   return (
     <div className="menu-dropdown">
       {items.map((item) => (
@@ -10,4 +10,4 @@ const MenuDropdoxn = ({ items }) => {
   );
 };
 
-export default MenuDropdoxn;
+export default MenuDropdown;
