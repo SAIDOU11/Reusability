@@ -1,18 +1,15 @@
-import { Menu } from './Menu/Menu.jsx';
-import MenuButton from './Menu/MenuButton.jsx';
-import MenuDropdown from './Menu/MenuDropdown.jsx';
-import MenuItem from './Menu/MenuItem.jsx';
+import Menu from './Menu/index.jsx';
 
 const App = () => {
   const sports = ['Tennis', 'Pickleball', 'Racquetball', 'Squash'];
   return (
     <Menu>
-      <MenuButton>Sports</MenuButton>
-      <MenuDropdown>
+      <Menu.Button>Sports</Menu.Button>
+      <Menu.Dropdown>
         {sports.map((sport) => (
-          <MenuItem key={sport}>{sport}</MenuItem>
+          <Menu.Item key={sport}>{sport}</Menu.Item>
         ))}
-      </MenuDropdown>
+      </Menu.Dropdown>
     </Menu>
   );
 };
