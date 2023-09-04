@@ -1,4 +1,4 @@
-import Menu from './Menu/Menu.jsx';
+import { Menu } from './Menu/Menu.jsx';
 import MenuButton from './Menu/MenuButton.jsx';
 import MenuDropdown from './Menu/MenuDropdown.jsx';
 import MenuItem from './Menu/MenuItem.jsx';

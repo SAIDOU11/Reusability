@@ -1,13 +1,20 @@
 import { useState } from 'react';
+import { createContext } from 'react';
+
+const MenuContext = createContext();
 
 const Menu = ({ children }) => {
-  const [open, setOpen] = useState(true);
+  // const [open, setOpen] = useState(true);
 
-  const toggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
+  // const toggle = () => {
+  //   setOpen((prevOpen) => !prevOpen);
+  // };
 
-  return <div className="menu">{children}</div>;
+  return (
+    <MenuContext.Provider value={false}>
+      <div className="menu">{children}</div>
+    </MenuContext.Provider>
+  );
 };
 
-export default Menu;
+export { Menu, MenuContext };
