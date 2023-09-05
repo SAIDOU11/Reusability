@@ -9,6 +9,10 @@ const Toggle = ({ children, onToggle }) => {
     setOn((prevOn) => !prevOn);
   };
 
+  useEffect(() => {
+    onToggle();
+  }, [on]);
+
   return (
     <ToggleContext.Provider value={{ on, toggle }}>
       {children}

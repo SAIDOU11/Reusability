@@ -1,8 +1,8 @@
 import Toggle from '../Toggle/index.jsx';
 
-const Menu = ({ children }) => {
+const Menu = ({ children, onOpen }) => {
   return (
-    <Toggle>
+    <Toggle onToggle={onOpen} >
       <div className="menu">{children}</div>
     </Toggle>
   );

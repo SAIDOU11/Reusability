@@ -5,16 +5,16 @@ const App = () => {
   const sports = ['Tennis', 'Pickleball', 'Racquetball', 'Squash'];
   return (
     <>
-      <Star />
+      <Star onChange={() => {}} />
       <br />
-      {/* <Menu>
+      <Menu onOpen={() => console.log('Menu open event.')}>
         <Menu.Button>Sports</Menu.Button>
         <Menu.Dropdown>
           {sports.map((sport) => {
             return <Menu.Item key={sport}>{sport} </Menu.Item>;
           })}
         </Menu.Dropdown>
-      </Menu> */}
+      </Menu>
     </>
   );
 };
