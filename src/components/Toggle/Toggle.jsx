@@ -1,13 +1,12 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 const ToggleContext = createContext();
 
-const Toggle = ({ children }) => {
+const Toggle = ({ children, onToggle }) => {
   const [on, setOn] = useState(false);
 
   const toggle = () => {
     setOn((prevOn) => !prevOn);
-    console.log('Toggled!');
   };
 
   return (
