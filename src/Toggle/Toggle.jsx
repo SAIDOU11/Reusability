@@ -7,7 +7,9 @@ const Toggle = ({ children }) => {
 
   const toggle = () => {
     setOn((prevOn) => !prevOn);
+    console.log('Toggled!');
   };
+
   return (
     <ToggleContext.Provider value={{ on, toggle }}>
       {children}
