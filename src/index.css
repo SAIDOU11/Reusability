@@ -100,6 +100,18 @@ button.button-danger {
   border-bottom: 1px solid #6b7280;
 }
 
+.star {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+  color: white;
+}
+
+.star.filled {
+  color: orange;
+}
+
 .box {
   height: 100px;
   width: 100px;
