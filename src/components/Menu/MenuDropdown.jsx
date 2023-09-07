@@ -1,11 +1,9 @@
-import Toggle from '../Toggle/index.jsx';
+import { MenuContext } from './Menu.jsx';
+import { useContext } from 'react';
 
 const MenuDropdown = ({ children }) => {
-  return (
-    <Toggle.On>
-      <div className="menu-dropdown">{children}</div>
-    </Toggle.On>
-  );
+  const { open } = useContext(MenuContext);
+  return open ? <div className="menu-dropdown">{children}</div> : null;
 };
 
 export default MenuDropdown;

@@ -1,12 +1,10 @@
 import Button from '../Button/Button.jsx';
-import Toggle from '../Toggle/index.jsx';
+import { MenuContext } from './Menu.jsx';
+import { useContext } from 'react';
 
 const MenuButton = ({ children }) => {
-  return (
-    <Toggle.Button>
-      <Button>{children}</Button>{' '}
-    </Toggle.Button>
-  );
+  const { toggleOpen } = useContext(MenuContext);
+  return <Button onClick={toggleOpen}>{children}</Button>;
 };
 
 export default MenuButton;

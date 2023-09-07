@@ -1,11 +1,18 @@
-import Toggle from '../Toggle/index.jsx';
+import { createContext } from 'react';
+import useToggle from '../../hooks/useToggle.jsx';
+
+const MenuContext = createContext();
 
 const Menu = ({ children, onOpen }) => {
+  const [open, toggleOpen] = useToggle({
+    onToggle: onOpen,
+  });
+
   return (
-    <Toggle onToggle={onOpen} >
+    <MenuContext.Provider value={{ open, toggleOpen }}>
       <div className="menu">{children}</div>
-    </Toggle>
+    </MenuContext.Provider>
   );
 };
 
-export default Menu;
+export { Menu, MenuContext };
